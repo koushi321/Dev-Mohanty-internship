@@ -1,8 +1,6 @@
 import React, { useState } from "react";
-import Lightbox from "yet-another-react-lightbox";
-import "yet-another-react-lightbox/styles.css";
-import Captions from "yet-another-react-lightbox/plugins/captions";
-import Zoom from "yet-another-react-lightbox/plugins/zoom";
+import Lightbox from "react-image-lightbox";
+import "react-image-lightbox/style.css";
 
 const placeholderImages = [
   { src: "https://via.placeholder.com/800x500?text=Image+1" },
@@ -36,10 +34,11 @@ const galleryAlbums = [
 const GallerySection = () => {
   const [open, setOpen] = useState(false);
   const [slides, setSlides] = useState([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const openAlbum = (album) => {
     if (album.images.length > 0) {
-      setSlides(album.images);
+      setSlides(album.images.map(img => img.src)); // Only store image URLs
       setOpen(true);
     }
   };
@@ -69,12 +68,20 @@ const GallerySection = () => {
         ))}
       </div>
 
-      <Lightbox
-        open={open}
-        close={() => setOpen(false)}
-        slides={slides}
-        plugins={[Captions, Zoom]}
-      />
+      {open && (
+        <Lightbox
+          mainSrc={slides[currentIndex]}
+          nextSrc={slides[(currentIndex + 1) % slides.length]}
+          prevSrc={slides[(currentIndex + slides.length - 1) % slides.length]}
+          onCloseRequest={() => setOpen(false)}
+          onMovePrevRequest={() =>
+            setCurrentIndex((currentIndex + slides.length - 1) % slides.length)
+          }
+          onMoveNextRequest={() =>
+            setCurrentIndex((currentIndex + 1) % slides.length)
+          }
+        />
+      )}
     </section>
   );
 };
