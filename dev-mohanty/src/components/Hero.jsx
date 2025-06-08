@@ -14,7 +14,7 @@ import Footer from './Footer'
 
 const Hero = () => {
   return (
-    <div className='relative w-full min-h-screen bg-[#0f172a] text-center pt-24 overflow-hidden'>
+    <div className='relative w-full min-h-screen bg-[#996633] text-center pt-24 overflow-hidden'>
 
       {/* 🔵 Floating blurred blob */}
       <div className="absolute top-[20%] left-[10%] w-[400px] h-[400px] bg-purple-600 opacity-30 rounded-full filter blur-3xl animate-pulse z-0"></div>

@@ -2,7 +2,7 @@ import React from 'react';
 
 const Awards = () => {
   return (
-    <div id="awards" className="w-full bg-[#0f172a] py-20 px-4 sm:px-8 md:px-16">
+    <div id="awards" className="w-full bg-[#996633] py-20 px-4 sm:px-8 md:px-16">
       <div className="max-w-5xl mx-auto text-center">
         
         {/* Stylish Heading */}

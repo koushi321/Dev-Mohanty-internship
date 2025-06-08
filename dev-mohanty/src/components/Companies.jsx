@@ -4,37 +4,37 @@ import React from "react";
 const companies = [
   { 
     name: "ASMACS", 
-    img: "/path-to-your-images/asmacs.png", 
+    img: "assets/C1.gif", 
     link: "#" 
   },
   { 
     name: "ASMACS Systems Solutions", 
-    img: "/path-to-your-images/solutions.png", 
+    img: "assets/C2.png", 
     link: "#" 
   },
   { 
     name: "Hunt Jobs Pvt Ltd", 
-    img: "/path-to-your-images/huntjobs.png", 
+    img: "asstes/C3.png", 
     link: "#" 
   },
   { 
     name: "Espire System Pvt Ltd", 
-    img: "/path-to-your-images/espire.png", 
+    img: "assets/C4.png", 
     link: "#" 
   },
   { 
     name: "Albert A.Abela", 
-    img: "/path-to-your-images/albert.png", 
+    img: "assets/C5.jpg", 
     link: "#" 
   },
   { 
     name: "Krishna Tradings", 
-    img: "/path-to-your-images/krishna.png", 
+    img: "/assets/C6.png", 
     link: "#" 
   },
   { 
     name: "Asmacs Tours & Travels", 
-    img: "/path-to-your-images/tours.png", 
+    img: "/assets/C7.gif", 
     link: "#" 
   },
   { 
@@ -51,7 +51,7 @@ const companies = [
 
 const Companies = () => {
   return (
-    <section className="bg-[#0f172a] py-12 px-4" id="companies">
+    <section className="bg-[#996633] py-12 px-4" id="companies">
       <h2 className="text-3xl font-bold text-center text-white mb-10">ASMACS GROUP OF COMPANIES</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
         {companies.map((company, index) => (

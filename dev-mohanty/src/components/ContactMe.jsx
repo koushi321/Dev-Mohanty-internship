@@ -22,9 +22,18 @@ const ContactMe = () => {
   };
 
   return (
-    <section id="connect" className="py-16 flex justify-center items-center bg-[#0f172a]">
-      <div className="w-full max-w-md p-8 bg-[#1e293b] rounded-lg shadow-lg">
-        <h2 className="text-4xl font-extrabold text-white mb-10 text-center">Contact Me</h2>
+    <section
+      id="connect"
+      className="py-16 flex justify-center items-center"
+      style={{ backgroundColor: "#996633" }}
+    >
+      <div
+        className="w-full max-w-md p-8 rounded-lg shadow-lg"
+        style={{ backgroundColor: "#855C2F" }}
+      >
+        <h2 className="text-4xl font-extrabold text-white mb-10 text-center">
+          Contact Me
+        </h2>
 
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
@@ -34,7 +43,7 @@ const ContactMe = () => {
               name="name"
               value={formData.name}
               onChange={handleChange}
-              className="w-full px-4 py-2 border border-gray-700 bg-[#0f172a] text-white rounded-md focus:outline-none focus:ring-2 focus:ring-white"
+              className="w-full px-4 py-2 border border-[#704A24] bg-[#704A24] text-white rounded-md focus:outline-none focus:ring-2 focus:ring-orange-200"
               required
             />
           </div>
@@ -47,7 +56,7 @@ const ContactMe = () => {
               value={formData.email}
               onChange={handleChange}
               placeholder="example@domain.com"
-              className="w-full px-4 py-2 border border-gray-700 bg-[#0f172a] text-white rounded-md focus:outline-none focus:ring-2 focus:ring-white"
+              className="w-full px-4 py-2 border border-[#704A24] bg-[#704A24] text-white rounded-md focus:outline-none focus:ring-2 focus:ring-orange-200"
               required
             />
           </div>
@@ -59,14 +68,14 @@ const ContactMe = () => {
               value={formData.message}
               onChange={handleChange}
               rows="5"
-              className="w-full px-4 py-2 border border-gray-700 bg-[#0f172a] text-white rounded-md focus:outline-none focus:ring-2 focus:ring-white"
+              className="w-full px-4 py-2 border border-[#704A24] bg-[#704A24] text-white rounded-md focus:outline-none focus:ring-2 focus:ring-orange-200"
               required
             ></textarea>
           </div>
 
           <button
             type="submit"
-            className="w-full bg-white text-black font-bold py-2 rounded-md hover:bg-gray-200 transition duration-300"
+            className="w-full bg-orange-100 text-black font-bold py-2 rounded-md hover:bg-orange-200 transition duration-300"
           >
             Send Message
           </button>
